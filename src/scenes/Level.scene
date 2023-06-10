@@ -1,0 +1,70 @@
+{
+    "id": "01aefa93-6044-4159-8358-7e91310aa05f",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "TilemapLayer",
+            "id": "a4467388-670c-4b4c-802f-11a3ec15dd6f",
+            "label": "map",
+            "tilemapId": "5f2faf6d-c727-4926-94a1-8a0251ec046c",
+            "layerName": "Bottom",
+            "tilesets": [
+                "sewer_tileset"
+            ]
+        },
+        {
+            "type": "ArcadeImage",
+            "id": "3898e067-68ba-4eeb-b5d3-7fe87cd635ae",
+            "label": "char",
+            "hitArea.shape": "CIRCLE",
+            "hitArea.x": 104,
+            "hitArea.y": 120,
+            "hitArea.radius": 104,
+            "texture": {
+                "key": "guapen"
+            },
+            "x": 508,
+            "y": 484,
+            "scaleX": 0.1,
+            "scaleY": 0.1,
+            "collideWorldBounds": true,
+            "bodyGeometry": 0,
+            "body.width": 128,
+            "body.height": 128,
+            "list": [
+                {
+                    "prefabId": "4a1e4a3c-5af7-4521-aff9-ec687104b318",
+                    "id": "e373da68-92b3-40ef-bf1d-9949079c3ba6",
+                    "label": "charInput"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "5f2faf6d-c727-4926-94a1-8a0251ec046c",
+            "type": "Tilemap",
+            "label": "sewers",
+            "key": "sewers",
+            "tilesets": [
+                {
+                    "name": "sewer_tileset",
+                    "imageKey": "sewer_tileset"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}
