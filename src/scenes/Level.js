@@ -34,6 +34,11 @@ class Level extends Phaser.Scene {
 		// charInput
 		new charInput(char);
 
+		// guapen
+		const guapen = this.add.image(907, 471, "guapen");
+		guapen.scaleX = 0.05;
+		guapen.scaleY = 0.05;
+
 		this.sewers = sewers;
 
 		this.events.emit("scene-awake");
