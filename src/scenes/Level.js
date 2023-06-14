@@ -24,7 +24,7 @@ class Level extends Phaser.Scene {
 		sewers.createLayer("Bottom", ["sewer_tileset"], 0, 0);
 
 		// char
-		const char = this.physics.add.image(508, 484, "guapen");
+		const char = this.physics.add.image(536, 484, "guapen");
 		char.setInteractive(new Phaser.Geom.Circle(104, 120, 104), Phaser.Geom.Circle.Contains);
 		char.scaleX = 0.1;
 		char.scaleY = 0.1;
