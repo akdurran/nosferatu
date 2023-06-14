@@ -36,7 +36,7 @@ class Char extends Phaser.Physics.Arcade.Image {
 		this.down = down;
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
+		this.health = 3;
 		/* END-USER-CTR-CODE */
 	}
 

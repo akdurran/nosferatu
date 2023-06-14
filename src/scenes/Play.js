@@ -1,5 +1,6 @@
 
 var enemies_global;
+var player_global;
 
 /* START OF COMPILED CODE */
 
@@ -82,6 +83,8 @@ class Play extends Phaser.Scene {
 
 		this.editorCreate();
 		this.sound.play("sound");
+		enemies_global = this.enemies;
+		player_global = this.player;
 	}
 	update() {
 		this.player.update();
@@ -89,11 +92,14 @@ class Play extends Phaser.Scene {
 		{
 			this.enemies.forEach(item => this.physics.moveToObject(item, this.player, 100));
 		}
+		this.health.text = "Health: " + this.player.health;
 	}
 
 	enemyHit()
 	{
-		this.enemies.forEach(item => item.destroy());
+		enemies_global.forEach(item => item.setX(-500), item => item.setY(-500));
+		player_global.health -= 1;
+		
 	}
 
 
