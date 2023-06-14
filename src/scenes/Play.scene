@@ -26,16 +26,15 @@
                 "x",
                 "y"
             ],
-            "label": "Player",
+            "label": "player",
             "scope": "PUBLIC",
             "x": 612,
-            "y": 407
+            "y": 418
         },
         {
             "type": "ArcadeImage",
             "id": "734a0215-dd59-4b14-b710-ac9718c93272",
             "label": "enemy",
-            "scope": "PUBLIC",
             "texture": {
                 "key": "guapen"
             },
@@ -50,7 +49,6 @@
             "type": "ArcadeImage",
             "id": "8c4d3250-c347-4fc6-913e-e184d6dc002c",
             "label": "enemy_1",
-            "scope": "PUBLIC",
             "texture": {
                 "key": "guapen"
             },
@@ -65,7 +63,6 @@
             "type": "ArcadeImage",
             "id": "8aaa8526-7361-4f96-8c3a-c9d5abf1a1bb",
             "label": "enemy_2",
-            "scope": "PUBLIC",
             "texture": {
                 "key": "guapen"
             },
@@ -75,6 +72,15 @@
             "scaleY": 0.05,
             "body.width": 208,
             "body.height": 240
+        },
+        {
+            "type": "Text",
+            "id": "89ffee62-87ce-4ae7-b2f9-d98f480d8dec",
+            "label": "health",
+            "scope": "CLASS",
+            "x": 1091,
+            "y": 24,
+            "text": "Health: 0"
         }
     ],
     "plainObjects": [
@@ -89,6 +95,15 @@
                     "imageKey": "sewer_tileset"
                 }
             ]
+        },
+        {
+            "id": "4aa7c9bc-9389-4aea-bc80-b17158539058",
+            "type": "Collider",
+            "label": "collider",
+            "scope": "PUBLIC",
+            "object1": "player",
+            "object2": "enemies",
+            "collideCallback": "this.enemyHit"
         }
     ],
     "meta": {
@@ -105,8 +120,7 @@
                 "8aaa8526-7361-4f96-8c3a-c9d5abf1a1bb",
                 "8c4d3250-c347-4fc6-913e-e184d6dc002c",
                 "734a0215-dd59-4b14-b710-ac9718c93272"
-            ],
-            "scope": "PUBLIC"
+            ]
         }
     ]
 }

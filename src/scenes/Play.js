@@ -1,5 +1,5 @@
 
-// You can write more code here
+var enemies_global;
 
 /* START OF COMPILED CODE */
 
@@ -9,7 +9,6 @@ class Play extends Phaser.Scene {
 		super("Play");
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
 
@@ -23,8 +22,8 @@ class Play extends Phaser.Scene {
 		// bottom_1
 		sewers.createLayer("Bottom", ["sewer_tileset"], 0, 0);
 
-		// Player
-		const player = new Char(this, 612, 407);
+		// player
+		const player = new Char(this, 612, 418);
 		this.add.existing(player);
 
 		// enemy
@@ -45,14 +44,20 @@ class Play extends Phaser.Scene {
 		enemy_2.scaleY = 0.05;
 		enemy_2.body.setSize(208, 240, false);
 
+		// health
+		const health = this.add.text(1091, 24, "", {});
+		health.text = "Health: 0";
+
 		// lists
 		const enemies = [enemy_2, enemy_1, enemy];
 
+		// collider
+		const collider = this.physics.add.collider(player, enemies, this.enemyHit);
+
 		this.player = player;
-		this.enemy = enemy;
-		this.enemy_1 = enemy_1;
-		this.enemy_2 = enemy_2;
+		this.health = health;
 		this.sewers = sewers;
+		this.collider = collider;
 		this.enemies = enemies;
 
 		this.events.emit("scene-awake");
@@ -60,14 +65,12 @@ class Play extends Phaser.Scene {
 
 	/** @type {Char} */
 	player;
-	/** @type {Phaser.Physics.Arcade.Image} */
-	enemy;
-	/** @type {Phaser.Physics.Arcade.Image} */
-	enemy_1;
-	/** @type {Phaser.Physics.Arcade.Image} */
-	enemy_2;
+	/** @type {Phaser.GameObjects.Text} */
+	health;
 	/** @type {Phaser.Tilemaps.Tilemap} */
 	sewers;
+	/** @type {Phaser.Physics.Arcade.Collider} */
+	collider;
 	/** @type {Phaser.Physics.Arcade.Image[]} */
 	enemies;
 
@@ -82,8 +85,17 @@ class Play extends Phaser.Scene {
 	}
 	update() {
 		this.player.update();
-		this.enemies.forEach(item => this.physics.moveToObject(item, this.player, 100))
+		if(this.enemies.length > 0)
+		{
+			this.enemies.forEach(item => this.physics.moveToObject(item, this.player, 100));
+		}
 	}
+
+	enemyHit()
+	{
+		this.enemies.forEach(item => item.destroy());
+	}
+
 
 	/* END-USER-CODE */
 }
