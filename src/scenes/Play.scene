@@ -1,0 +1,112 @@
+{
+    "id": "b05ccc7f-04d8-4ba9-b2b5-690b003fd2ee",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Play",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "TilemapLayer",
+            "id": "25661a2c-d4ae-4233-b153-923664de2fa4",
+            "label": "bottom_1",
+            "tilemapId": "0589eafd-c934-4ad2-a34c-921c6aa7bf79",
+            "layerName": "Bottom",
+            "tilesets": [
+                "sewer_tileset"
+            ]
+        },
+        {
+            "prefabId": "953c1090-1eaf-49d2-a812-80a0f765ad83",
+            "id": "4dfad1a2-6e84-4983-ba76-27ead653ef69",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "Player",
+            "scope": "PUBLIC",
+            "x": 612,
+            "y": 407
+        },
+        {
+            "type": "ArcadeImage",
+            "id": "734a0215-dd59-4b14-b710-ac9718c93272",
+            "label": "enemy",
+            "scope": "PUBLIC",
+            "texture": {
+                "key": "guapen"
+            },
+            "x": 881,
+            "y": 452,
+            "scaleX": 0.05,
+            "scaleY": 0.05,
+            "body.width": 208,
+            "body.height": 240
+        },
+        {
+            "type": "ArcadeImage",
+            "id": "8c4d3250-c347-4fc6-913e-e184d6dc002c",
+            "label": "enemy_1",
+            "scope": "PUBLIC",
+            "texture": {
+                "key": "guapen"
+            },
+            "x": 1077,
+            "y": 126,
+            "scaleX": 0.05,
+            "scaleY": 0.05,
+            "body.width": 208,
+            "body.height": 240
+        },
+        {
+            "type": "ArcadeImage",
+            "id": "8aaa8526-7361-4f96-8c3a-c9d5abf1a1bb",
+            "label": "enemy_2",
+            "scope": "PUBLIC",
+            "texture": {
+                "key": "guapen"
+            },
+            "x": 1158,
+            "y": 152,
+            "scaleX": 0.05,
+            "scaleY": 0.05,
+            "body.width": 208,
+            "body.height": 240
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "0589eafd-c934-4ad2-a34c-921c6aa7bf79",
+            "type": "Tilemap",
+            "label": "sewers",
+            "key": "sewers",
+            "tilesets": [
+                {
+                    "name": "sewer_tileset",
+                    "imageKey": "sewer_tileset"
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    },
+    "lists": [
+        {
+            "id": "d5426692-f31a-4f7d-80d7-85886138d664",
+            "label": "enemies",
+            "objectIds": [
+                "8aaa8526-7361-4f96-8c3a-c9d5abf1a1bb",
+                "8c4d3250-c347-4fc6-913e-e184d6dc002c",
+                "734a0215-dd59-4b14-b710-ac9718c93272"
+            ],
+            "scope": "PUBLIC"
+        }
+    ]
+}

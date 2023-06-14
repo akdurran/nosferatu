@@ -1,0 +1,71 @@
+{
+    "id": "953c1090-1eaf-49d2-a812-80a0f765ad83",
+    "sceneType": "PREFAB",
+    "settings": {
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "ArcadeImage",
+            "id": "a656af18-b190-41a6-b4e0-17d2a3fc348e",
+            "label": "char",
+            "scope": "PUBLIC",
+            "hitArea.shape": "CIRCLE",
+            "hitArea.x": 104,
+            "hitArea.y": 120,
+            "hitArea.radius": 104,
+            "texture": {
+                "key": "guapen"
+            },
+            "scaleX": 0.1,
+            "scaleY": 0.1,
+            "collideWorldBounds": true,
+            "bodyGeometry": 0,
+            "body.width": 128,
+            "body.height": 128,
+            "list": [
+                {
+                    "type": "ScriptNode",
+                    "id": "9706bdd5-2d7d-447e-a75a-8d62a54240c7",
+                    "label": "inputScript"
+                }
+            ]
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "0744613d-decd-4d48-857c-7e7609d1cc1f",
+            "type": "Keyboard.Key",
+            "label": "left",
+            "keyCode": "A"
+        },
+        {
+            "id": "7a8675c1-98a2-4511-b117-cfb4d53b331a",
+            "type": "Keyboard.Key",
+            "label": "up",
+            "keyCode": "W"
+        },
+        {
+            "id": "1318cbd2-d496-49c1-9929-d863a7816433",
+            "type": "Keyboard.Key",
+            "label": "right",
+            "keyCode": "D"
+        },
+        {
+            "id": "c8423ce8-3c9c-406a-a826-381356aa26cb",
+            "type": "Keyboard.Key",
+            "label": "down",
+            "keyCode": "S"
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}
