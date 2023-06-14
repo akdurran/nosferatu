@@ -23,6 +23,7 @@
             "type": "ArcadeImage",
             "id": "3898e067-68ba-4eeb-b5d3-7fe87cd635ae",
             "label": "char",
+            "scope": "PUBLIC",
             "hitArea.shape": "CIRCLE",
             "hitArea.x": 104,
             "hitArea.y": 120,
@@ -47,16 +48,22 @@
             ]
         },
         {
-            "type": "Image",
+            "type": "ArcadeImage",
             "id": "46dbf322-62cf-4ac4-ab6c-3461ed0e8d18",
-            "label": "guapen",
+            "label": "enemy",
+            "scope": "PUBLIC",
+            "hitArea.shape": "PIXEL_PERFECT",
+            "hitArea.width": 208,
+            "hitArea.height": 240,
             "texture": {
                 "key": "guapen"
             },
             "x": 907,
             "y": 471,
             "scaleX": 0.05,
-            "scaleY": 0.05
+            "scaleY": 0.05,
+            "body.width": 208,
+            "body.height": 240
         }
     ],
     "plainObjects": [

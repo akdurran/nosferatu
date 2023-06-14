@@ -2,6 +2,19 @@
     "section1": {
         "files": [
             {
+                "url": "assets/Full_SpriteSheet.png",
+                "frameConfig": {
+                    "frameWidth": 16,
+                    "frameHeight": 16,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "Full_SpriteSheet"
+            },
+            {
                 "url": "assets/map.json",
                 "type": "tilemapTiledJSON",
                 "key": "map"

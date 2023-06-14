@@ -34,22 +34,30 @@ class Level extends Phaser.Scene {
 		// charInput
 		new charInput(char);
 
-		// guapen
-		const guapen = this.add.image(907, 471, "guapen");
-		guapen.scaleX = 0.05;
-		guapen.scaleY = 0.05;
+		// enemy
+		const enemy = this.physics.add.image(907, 471, "guapen");
+		enemy.setInteractive(this.input.makePixelPerfect());
+		enemy.scaleX = 0.05;
+		enemy.scaleY = 0.05;
+		enemy.body.setSize(208, 240, false);
 
+		this.char = char;
+		this.enemy = enemy;
 		this.sewers = sewers;
 
 		this.events.emit("scene-awake");
 	}
 
+	/** @type {Phaser.Physics.Arcade.Image} */
+	char;
+	/** @type {Phaser.Physics.Arcade.Image} */
+	enemy;
 	/** @type {Phaser.Tilemaps.Tilemap} */
 	sewers;
 
 	/* START-USER-CODE */
 
-	// Write your code here
+	char_global = this.char;
 
 
 
@@ -57,6 +65,11 @@ class Level extends Phaser.Scene {
 
 		this.editorCreate();
 		this.sound.play("sound");
+	}
+
+	update()
+	{
+		this.physics.moveToObject(this.enemy, this.char, 100);
 	}
 
 	/* END-USER-CODE */
