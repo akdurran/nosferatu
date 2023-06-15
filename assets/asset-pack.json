@@ -2,10 +2,15 @@
     "section1": {
         "files": [
             {
+                "url": "assets/down.png",
+                "type": "image",
+                "key": "down"
+            },
+            {
                 "url": "assets/Full_SpriteSheet.png",
                 "frameConfig": {
-                    "frameWidth": 16,
-                    "frameHeight": 16,
+                    "frameWidth": 8,
+                    "frameHeight": 8,
                     "startFrame": 0,
                     "endFrame": -1,
                     "spacing": 0,
@@ -15,9 +20,19 @@
                 "key": "Full_SpriteSheet"
             },
             {
+                "url": "assets/left.png",
+                "type": "image",
+                "key": "left"
+            },
+            {
                 "url": "assets/map.json",
                 "type": "tilemapTiledJSON",
                 "key": "map"
+            },
+            {
+                "url": "assets/right.png",
+                "type": "image",
+                "key": "right"
             },
             {
                 "url": "assets/sewer_tileset.png",
@@ -33,6 +48,11 @@
                 "url": "assets/tileset.png",
                 "type": "image",
                 "key": "tileset"
+            },
+            {
+                "url": "assets/up.png",
+                "type": "image",
+                "key": "up"
             }
         ]
     },

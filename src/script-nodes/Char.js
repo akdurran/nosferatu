@@ -6,14 +6,12 @@
 class Char extends Phaser.Physics.Arcade.Image {
 
 	constructor(scene, x, y, texture, frame) {
-		super(scene, x ?? 0, y ?? 0, texture || "guapen", frame);
+		super(scene, x ?? 0, y ?? 0, texture || "down", frame);
 
-		this.setInteractive(new Phaser.Geom.Circle(104, 120, 104), Phaser.Geom.Circle.Contains);
-		this.scaleX = 0.1;
-		this.scaleY = 0.1;
+		this.setInteractive(new Phaser.Geom.Rectangle(0, 0, 14, 22), Phaser.Geom.Rectangle.Contains);
 		scene.physics.add.existing(this, false);
 		this.body.collideWorldBounds = true;
-		this.body.setCircle(64);
+		this.body.setSize(14, 22, false);
 
 		// inputScript
 		new ScriptNode(this);

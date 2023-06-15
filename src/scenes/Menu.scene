@@ -13,9 +13,11 @@
             "type": "Text",
             "id": "df23a8c6-b652-49c1-94c4-4609c2c00c75",
             "label": "start",
-            "x": 418,
+            "x": 6,
             "y": 371,
-            "text": "Nosferatu\n\nWASD to move. Space to fire homing sphere.\n\nPress E to start."
+            "scaleX": 0.9566787934135329,
+            "scaleY": 0.8155172074116247,
+            "text": "Nosferatu\n\nWASD to move. Space to fire homing sphere.\nYou must dodge Nosferatu's homing spheres.\n\nPress E to start.\n\nNosferatu's Spheres have been significantly slowed down, and the player's spheres have been significantly sped up, for testing purposes. \nAt reasonable speeds the game would be very difficult, requiring precise movements to avoid the spheres."
         }
     ],
     "plainObjects": [

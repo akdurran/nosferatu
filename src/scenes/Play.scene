@@ -2,6 +2,8 @@
     "id": "b05ccc7f-04d8-4ba9-b2b5-690b003fd2ee",
     "sceneType": "SCENE",
     "settings": {
+        "snapWidth": 14,
+        "snapHeight": 22,
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
         "sceneKey": "Play",
@@ -38,38 +40,13 @@
             "texture": {
                 "key": "guapen"
             },
-            "x": 881,
-            "y": 452,
             "scaleX": 0.05,
             "scaleY": 0.05,
-            "body.width": 208,
-            "body.height": 240
-        },
-        {
-            "type": "ArcadeImage",
-            "id": "8c4d3250-c347-4fc6-913e-e184d6dc002c",
-            "label": "enemy_1",
-            "texture": {
-                "key": "guapen"
-            },
-            "x": 1077,
-            "y": 126,
-            "scaleX": 0.05,
-            "scaleY": 0.05,
-            "body.width": 208,
-            "body.height": 240
-        },
-        {
-            "type": "ArcadeImage",
-            "id": "8aaa8526-7361-4f96-8c3a-c9d5abf1a1bb",
-            "label": "enemy_2",
-            "texture": {
-                "key": "guapen"
-            },
-            "x": 1158,
-            "y": 152,
-            "scaleX": 0.05,
-            "scaleY": 0.05,
+            "tintTopLeft": "#c422ff",
+            "tintTopRight": "#c422ff",
+            "tintBottomLeft": "#c422ff",
+            "tintBottomRight": "#c422ff",
+            "tintFill": true,
             "body.width": 208,
             "body.height": 240
         },
@@ -81,6 +58,42 @@
             "x": 1091,
             "y": 24,
             "text": "Health: 0"
+        },
+        {
+            "type": "ArcadeImage",
+            "id": "ed375786-a6ad-45dc-a86f-99d762f85e93",
+            "label": "orb",
+            "scope": "CLASS",
+            "texture": {
+                "key": "guapen"
+            },
+            "x": 1662,
+            "y": 572,
+            "scaleX": 0.05,
+            "scaleY": 0.05,
+            "tintTopLeft": "#d50f0f",
+            "tintTopRight": "#810808",
+            "tintBottomLeft": "#b10a0a",
+            "tintBottomRight": "#970606",
+            "tintFill": true,
+            "body.width": 208,
+            "body.height": 240
+        },
+        {
+            "type": "ArcadeImage",
+            "id": "8a2df540-3036-4446-a093-54c5f4300bb0",
+            "label": "nosferatu",
+            "scope": "CLASS",
+            "texture": {
+                "key": "down"
+            },
+            "tintTopLeft": "#bdc209",
+            "tintTopRight": "#d91111",
+            "tintBottomLeft": "#fa7979",
+            "tintBottomRight": "#f20000",
+            "tintFill": true,
+            "body.width": 14,
+            "body.height": 22
         }
     ],
     "plainObjects": [
@@ -103,7 +116,22 @@
             "scope": "PUBLIC",
             "object1": "player",
             "object2": "enemies",
+            "overlapOnly": true,
             "collideCallback": "this.enemyHit"
+        },
+        {
+            "id": "c0148946-1ea6-4ca4-977c-1082a876a160",
+            "type": "Collider",
+            "label": "collider_1",
+            "scope": "LOCAL",
+            "object1": "orb",
+            "object2": "nosferatu",
+            "collideCallback": "this.nosferatuHit"
+        },
+        {
+            "id": "51fbd136-0139-4b1a-ae66-8fa254aeec9f",
+            "type": "Keyboard.Key",
+            "label": "fire"
         }
     ],
     "meta": {
@@ -117,8 +145,6 @@
             "id": "d5426692-f31a-4f7d-80d7-85886138d664",
             "label": "enemies",
             "objectIds": [
-                "8aaa8526-7361-4f96-8c3a-c9d5abf1a1bb",
-                "8c4d3250-c347-4fc6-913e-e184d6dc002c",
                 "734a0215-dd59-4b14-b710-ac9718c93272"
             ],
             "scope": "PUBLIC"

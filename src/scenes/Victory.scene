@@ -1,0 +1,37 @@
+{
+    "id": "bfac48aa-9309-4ff4-95ca-cd9293588eec",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Victory",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Text",
+            "id": "a97a64ff-2071-421c-b226-77ac706d4487",
+            "label": "text_1",
+            "x": 143,
+            "y": 292,
+            "scaleX": 3,
+            "scaleY": 3,
+            "text": "Victory!\n\nPress E to return to the main menu"
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "90fafa14-39cc-429d-b3b1-026d5582cbc8",
+            "type": "Keyboard.Key",
+            "label": "restart",
+            "keyCode": "E"
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

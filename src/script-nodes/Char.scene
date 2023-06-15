@@ -14,19 +14,19 @@
             "id": "a656af18-b190-41a6-b4e0-17d2a3fc348e",
             "label": "char",
             "scope": "PUBLIC",
-            "hitArea.shape": "CIRCLE",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 14,
+            "hitArea.height": 22,
             "hitArea.x": 104,
             "hitArea.y": 120,
             "hitArea.radius": 104,
+            "hitArea.points": "0 5.5 7 0 14 5.5 14 22 0 22",
             "texture": {
-                "key": "guapen"
+                "key": "down"
             },
-            "scaleX": 0.1,
-            "scaleY": 0.1,
             "collideWorldBounds": true,
-            "bodyGeometry": 0,
-            "body.width": 128,
-            "body.height": 128,
+            "body.width": 14,
+            "body.height": 22,
             "list": [
                 {
                     "type": "ScriptNode",
