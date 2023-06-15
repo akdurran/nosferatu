@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-class GameOver extends Phaser.Scene {
+class Menu extends Phaser.Scene {
 
 	constructor() {
-		super("GameOver");
+		super("Menu");
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -19,17 +19,9 @@ class GameOver extends Phaser.Scene {
 		// startKey
 		const startKey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.E);
 
-		// gameOverLabel
-		const gameOverLabel = this.add.text(250, 300, "", {});
-		gameOverLabel.scaleX = 10;
-		gameOverLabel.scaleY = 10;
-		gameOverLabel.text = "Game Over\n";
-
-		// continueButton
-		const continueButton = this.add.text(219, 537, "", {});
-		continueButton.scaleX = 5;
-		continueButton.scaleY = 5;
-		continueButton.text = "Press E to Continue.\n\n";
+		// start
+		const start = this.add.text(418, 371, "", {});
+		start.text = "Nosferatu\n\nWASD to move. Space to fire homing sphere.\n\nPress E to start.";
 
 		this.startKey = startKey;
 
@@ -48,13 +40,12 @@ class GameOver extends Phaser.Scene {
 		this.editorCreate();
 	}
 
-	update() {
-
+	update()
+	{
 		if(this.startKey.isDown)
 		{
 			this.scene.start("Play");
 		}
-
 	}
 
 	/* END-USER-CODE */

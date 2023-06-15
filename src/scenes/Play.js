@@ -96,7 +96,7 @@ class Play extends Phaser.Scene {
 		}
 		this.health.text = "Health: " + this.player.health;
 		this.enemySpeed += 0.1;
-		if (this.playersupe.health <= 0)
+		if (this.player.health <= 0)
 		{
 			this.scene.start("GameOver");
 		}

@@ -23,21 +23,21 @@
             "type": "Text",
             "id": "36eacfad-ebac-4b4b-b5cd-d416e9e2d8ce",
             "label": "continueButton",
-            "x": 440,
+            "x": 219,
             "y": 537,
             "scaleX": 5,
             "scaleY": 5,
-            "text": "Continue?\n\n",
-            "list": [
-                {
-                    "prefabId": "0e39177a-6e19-4b56-a7c2-2360a2e41505",
-                    "id": "5e95a50c-495a-426c-b9ad-c7207c6ca55d",
-                    "label": "pushActionScript"
-                }
-            ]
+            "text": "Press E to Continue.\n\n"
         }
     ],
-    "plainObjects": [],
+    "plainObjects": [
+        {
+            "id": "61f02e1c-580f-48bf-afbb-dfffa29529c1",
+            "type": "Keyboard.Key",
+            "label": "startKey",
+            "keyCode": "E"
+        }
+    ],
     "meta": {
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",

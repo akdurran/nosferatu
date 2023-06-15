@@ -70,6 +70,7 @@ window.addEventListener('load', function () {
 	});
 	
 	game.scene.add("Preload", Preload);
+	game.scene.add("Menu", Menu);
 	game.scene.add("Play", Play);
 	game.scene.add("GameOver", GameOver);
 	game.scene.add("Boot", Boot, true);

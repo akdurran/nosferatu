@@ -1,0 +1,35 @@
+{
+    "id": "08621954-5e7f-4b2e-ae40-2f5987731225",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Menu",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "type": "Text",
+            "id": "df23a8c6-b652-49c1-94c4-4609c2c00c75",
+            "label": "start",
+            "x": 418,
+            "y": 371,
+            "text": "Nosferatu\n\nWASD to move. Space to fire homing sphere.\n\nPress E to start."
+        }
+    ],
+    "plainObjects": [
+        {
+            "id": "1cf68d55-acd1-4868-98a1-b95f6b7ce544",
+            "type": "Keyboard.Key",
+            "label": "startKey",
+            "keyCode": "E"
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}
