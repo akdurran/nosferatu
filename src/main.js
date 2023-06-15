@@ -1,3 +1,9 @@
+/* Credits for assets:
+https://opengameart.org/content/dark-gothic-haunted-masquerade
+https://chasersgaming.itch.io/rpg-asset-character-poor-folk-1-nes
+https://github.com/mapeditor/tiled/tree/master/examples
+https://github.com/PhaserEditor2D/starter-template-basic-javascript/tree/master/assets
+*/
 
 
 var char_global;
