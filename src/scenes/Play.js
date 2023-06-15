@@ -1,6 +1,7 @@
 
 var enemies_global;
 var player_global;
+var self_global;
 
 /* START OF COMPILED CODE */
 
@@ -10,6 +11,7 @@ class Play extends Phaser.Scene {
 		super("Play");
 
 		/* START-USER-CTR-CODE */
+		this.enemySpeed = 100;
 		/* END-USER-CTR-CODE */
 	}
 
@@ -90,15 +92,22 @@ class Play extends Phaser.Scene {
 		this.player.update();
 		if(this.enemies.length > 0)
 		{
-			this.enemies.forEach(item => this.physics.moveToObject(item, this.player, 100));
+			this.enemies.forEach(item => this.physics.moveToObject(item, this.player, this.enemySpeed));
 		}
 		this.health.text = "Health: " + this.player.health;
+		this.enemySpeed += 0.1;
+		if (this.playersupe.health <= 0)
+		{
+			this.scene.start("GameOver");
+		}
 	}
 
 	enemyHit()
 	{
 		enemies_global.forEach(item => item.setX(-500), item => item.setY(-500));
+		this.enemySpeed = 100;
 		player_global.health -= 1;
+		
 		
 	}
 
